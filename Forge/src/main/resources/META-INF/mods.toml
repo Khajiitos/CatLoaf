@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/Khajiitos/CatLoaf/issues"
+
+[[mods]]
+modId = "catloaf"
+version = "${version}"
+logoFile="icon.png"
+displayName = "Cat Loaf"
+authors = "Khajiitos"
+displayURL="https://github.com/Khajiitos/CatLoaf"
+description = '''Adds a loafing position for cats.'''
+displayTest = "MATCH_VERSION"
+
+[[dependencies.catloaf]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.catloaf]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"

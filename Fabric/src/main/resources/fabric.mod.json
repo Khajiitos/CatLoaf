@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "catloaf",
+  "version": "${version}",
+  "name": "Cat Loaf",
+  "description": "Adds a loafing position for cats.",
+  "authors": ["Khajiitos"],
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "contact": {
+    "homepage": "https://github.com/Khajiitos/CatLoaf",
+    "sources": "https://github.com/Khajiitos/CatLoaf",
+    "issues": "https://github.com/Khajiitos/CatLoaf/issues"
+  },
+  "entrypoints": {
+    "client": [
+      "me.khajiitos.catloaf.fabric.CatLoafFabric"
+    ]
+  },
+  "mixins": [
+    "catloaf.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "${minecraft_version_range}",
+    "java": ">=17"
+  }
+}
