@@ -19,6 +19,19 @@ pluginManagement {
             url = 'https://maven.neoforged.net/releases'
         }
     }
+
+    buildscript {
+        configurations.configureEach {
+            resolutionStrategy {
+                eachDependency {
+                    if (requested.group == "com.google.code.gson" && requested.name == "gson") {
+                        useVersion("2.10.1")
+                        because("Fabric Loom requires a more recent version of Guava than FooJay toolchains")
+                    }
+                }
+            }
+        }
+    }
 }
 
 plugins {
