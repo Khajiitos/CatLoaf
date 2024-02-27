@@ -11,7 +11,7 @@ displayName = "Cat Loaf"
 authors = "Khajiitos"
 displayURL="https://github.com/Khajiitos/CatLoaf"
 description = '''Adds a loafing position for cats.'''
-displayTest = "IGNORE_ALL_VERSION"
+displayTest = "MATCH_VERSION"
 
 [[mixins]]
 config="catloaf.mixins.json"
