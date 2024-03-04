@@ -11,6 +11,7 @@ displayName = "Cat Loaf"
 authors = "Khajiitos"
 displayURL="https://github.com/Khajiitos/CatLoaf"
 description = '''Adds a loafing position for cats.'''
+updateJSONURL = "https://updates.khajiitos.fun/cat-loaf/updates-neoforge.json"
 displayTest = "MATCH_VERSION"
 
 [[mixins]]

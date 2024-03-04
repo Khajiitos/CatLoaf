@@ -9,8 +9,9 @@ version = "${version}"
 logoFile="icon.png"
 displayName = "Cat Loaf"
 authors = "Khajiitos"
-displayURL="https://github.com/Khajiitos/CatLoaf"
+displayURL = "https://github.com/Khajiitos/CatLoaf"
 description = '''Adds a loafing position for cats.'''
+updateJSONURL = "https://updates.khajiitos.fun/cat-loaf/updates-forge.json"
 displayTest = "MATCH_VERSION"
 
 [[dependencies.catloaf]]

@@ -16,6 +16,9 @@
   "entrypoints": {
     "client": [
       "me.khajiitos.catloaf.fabric.CatLoafFabric"
+    ],
+    "modmenu": [
+      "me.khajiitos.catloaf.fabric.ModMenuApiImpl"
     ]
   },
   "mixins": [
