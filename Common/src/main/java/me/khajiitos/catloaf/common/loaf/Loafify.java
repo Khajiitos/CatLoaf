@@ -1,4 +1,4 @@
-package me.khajiitos.catloaf.common;
+package me.khajiitos.catloaf.common.loaf;
 
 import net.minecraft.client.model.geom.ModelPart;
 

@@ -1,6 +1,7 @@
 package me.khajiitos.catloaf.common.mixin;
 
-import me.khajiitos.catloaf.common.ILoafable;
+import me.khajiitos.catloaf.common.config.CatLoafConfig;
+import me.khajiitos.catloaf.common.loaf.ILoafable;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -51,7 +52,7 @@ public abstract class CatMixin extends TamableAnimal implements ILoafable {
     @Override
     public void setInSittingPose(boolean sitting) {
         super.setInSittingPose(sitting);
-        this.setLoafing(sitting && (catloaf$forceLoaf || this.random.nextBoolean()));
+        this.setLoafing(sitting && (catloaf$forceLoaf || this.random.nextInt(100) < CatLoafConfig.loafChance.get()));
         catloaf$forceLoaf = false;
     }
 
@@ -69,7 +70,7 @@ public abstract class CatMixin extends TamableAnimal implements ILoafable {
 
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/Cat;setOrderedToSit(Z)V", ordinal = 0, shift = At.Shift.AFTER), method = "mobInteract")
     public void mobInteract(Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResult> callbackInfo) {
-        if (player.getItemInHand(interactionHand).is(Items.BREAD) && this.isOrderedToSit()) {
+        if (CatLoafConfig.overrideChanceWithBread.get() && player.getItemInHand(interactionHand).is(Items.BREAD) && this.isOrderedToSit()) {
             catloaf$forceLoaf = true;
         }
     }

@@ -1,4 +1,4 @@
-package me.khajiitos.catloaf.common;
+package me.khajiitos.catloaf.common.loaf;
 
 public interface ILoafable {
     boolean isLoafing();
