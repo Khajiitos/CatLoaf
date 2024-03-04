@@ -1,0 +1,8 @@
+{
+  "catloaf.config.header": "Cat Loaf - Konfiguracja",
+  "catloaf.config.category.general": "Ogólne",
+  "catloaf.config.loafChance": "Szansa na bochenek (%)",
+  "catloaf.config.loafChance.description": "Definiuje szansę na bochenkowanie kota zamiast siedzenia.",
+  "catloaf.config.overrideChanceWithBread": "Nadpisz szansę z chlebem",
+  "catloaf.config.overrideChanceWithBread.description": "Gdy trzymasz chleb, szansa na bochenkowanie kota wynosi 100%"
+}

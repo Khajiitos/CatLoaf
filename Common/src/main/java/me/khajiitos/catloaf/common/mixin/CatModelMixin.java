@@ -1,7 +1,7 @@
 package me.khajiitos.catloaf.common.mixin;
 
-import me.khajiitos.catloaf.common.ILoafable;
-import me.khajiitos.catloaf.common.Loafify;
+import me.khajiitos.catloaf.common.loaf.ILoafable;
+import me.khajiitos.catloaf.common.loaf.Loafify;
 import net.minecraft.client.model.CatModel;
 import net.minecraft.client.model.OcelotModel;
 import net.minecraft.client.model.geom.ModelPart;
