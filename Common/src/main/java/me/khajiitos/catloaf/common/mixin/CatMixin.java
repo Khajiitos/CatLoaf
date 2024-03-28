@@ -52,7 +52,7 @@ public abstract class CatMixin extends TamableAnimal implements ILoafable {
     @Override
     public void setInSittingPose(boolean sitting) {
         super.setInSittingPose(sitting);
-        this.setLoafing(sitting && (catloaf$forceLoaf || this.random.nextInt(100) < CatLoafConfig.loafChance.get()));
+        this.setLoafing(this.isOrderedToSit() && sitting && (catloaf$forceLoaf || this.random.nextInt(100) < CatLoafConfig.loafChance.get()));
         catloaf$forceLoaf = false;
     }
 
