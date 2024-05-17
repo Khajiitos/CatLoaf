@@ -1,0 +1,33 @@
+modLoader = "javafml"
+loaderVersion = "${neo_loader_version_range}"
+license = "MIT"
+issueTrackerURL = "https://github.com/Khajiitos/CatLoaf/issues"
+
+[[mods]]
+modId = "catloaf"
+version = "${version}"
+logoFile="icon.png"
+displayName = "Cat Loaf"
+authors = "Khajiitos"
+displayURL="https://github.com/Khajiitos/CatLoaf"
+description = '''Adds a loafing position for cats.'''
+updateJSONURL = "https://updates.khajiitos.fun/cat-loaf/updates-neoforge.json"
+displayTest = "MATCH_VERSION"
+
+[[mixins]]
+config="catloaf.mixins.json"
+
+[[dependencies.catloaf]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.catloaf]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
