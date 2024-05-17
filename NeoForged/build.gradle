@@ -9,10 +9,10 @@ buildscript {
 
 plugins {
     id 'idea'
-    id 'net.neoforged.gradle.userdev' version '7.0.57'
+    id 'net.neoforged.gradle.userdev' version '7.+'
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 base {
     archivesName = mod_id + "-" + mod_version + "-" + minecraft_version_group + "-NEOFORGED"
@@ -108,7 +108,7 @@ tasks.withType(Javadoc).configureEach {
 
 // Ideally this project would use Gradle from the root project
 tasks.register('wrapper', Wrapper) {
-    gradleVersion = '8.1.1'
+    gradleVersion = '8.7'
 }
 
 // Register dummy ideaSyncTask so that Gradle doesn't complain

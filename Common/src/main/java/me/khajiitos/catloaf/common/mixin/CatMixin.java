@@ -35,8 +35,8 @@ public abstract class CatMixin extends TamableAnimal implements ILoafable {
     }
 
     @Inject(at = @At("TAIL"), method = "defineSynchedData")
-    public void defineSynchedData(CallbackInfo ci) {
-        this.entityData.define(LOAFING, false);
+    public void defineSynchedData(SynchedEntityData.Builder builder, CallbackInfo ci) {
+        builder.define(LOAFING, false);
     }
 
     @Override
