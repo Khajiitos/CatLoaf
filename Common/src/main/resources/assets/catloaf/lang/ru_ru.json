@@ -1,0 +1,8 @@
+{
+  "catloaf.config.header": "Конфиг Cat Loaf",
+  "catloaf.config.category.general": "Главная",
+  "catloaf.config.loafChance": "Шанс на булку (%)",
+  "catloaf.config.loafChance.description": "Определяет вероятность того, что кошка станет булкой, а не будет сидеть.",
+  "catloaf.config.overrideChanceWithBread": "Переопределить шанс с помощью хлеба",
+  "catloaf.config.overrideChanceWithBread.description": "Если держать хлеб, то вероятность того, что кошка станет булкой, равна 100%."
+}
