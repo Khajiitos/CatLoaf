@@ -5,6 +5,7 @@
   "name": "Cat Loaf",
   "description": "Adds a loafing position for cats.",
   "authors": ["Khajiitos"],
+  "contributors": ["dima_dencep"],
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
