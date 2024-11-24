@@ -8,7 +8,9 @@
   },
   "refmap": "catloaf.refmap.json",
   "client": [
-    "CatModelMixin"
+    "CatModelMixin",
+    "CatRendererMixin",
+    "CatRenderStateMixin"
   ],
   "mixins": [
     "CatMixin"

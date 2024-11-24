@@ -16,7 +16,7 @@ public class CatLoafNeoForged {
         CatLoafConfig.init();
 
         if (FMLLoader.getDist() == Dist.CLIENT && ClothConfigCheck.isInstalled()) {
-            container.registerExtensionPoint(IConfigScreenFactory.class, ClothConfigScreenMaker::create);
+            container.registerExtensionPoint(IConfigScreenFactory.class, (modContainer, screen) -> ClothConfigScreenMaker.create(screen));
         }
     }
 }
