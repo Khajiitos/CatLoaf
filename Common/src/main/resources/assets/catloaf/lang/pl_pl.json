@@ -4,5 +4,7 @@
   "catloaf.config.loafChance": "Szansa na bochenek (%)",
   "catloaf.config.loafChance.description": "Definiuje szansę na bochenkowanie kota zamiast siedzenia.",
   "catloaf.config.overrideChanceWithBread": "Nadpisz szansę z chlebem",
-  "catloaf.config.overrideChanceWithBread.description": "Gdy trzymasz chleb, szansa na bochenkowanie kota wynosi 100%"
+  "catloaf.config.overrideChanceWithBread.description": "Gdy trzymasz chleb, szansa na bochenkowanie kota wynosi 100%",
+  "catloaf.config.hideTailWhenLoafing": "Ukryj ogon przy bochenkowaniu",
+  "catloaf.config.hideTailWhenLoafing.description": "Ogon kota jest ukryty gdy bochenkuje, dzięki czemu jest to bardziej prawdziwy bochenek."
 }

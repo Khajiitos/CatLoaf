@@ -25,6 +25,9 @@ public class CatLoafConfig {
     @Entry
     public static final CatLoafConfigValues.BooleanValue overrideChanceWithBread = new CatLoafConfigValues.BooleanValue(true);
 
+    @Entry
+    public static final CatLoafConfigValues.BooleanValue hideTailWhenLoafing = new CatLoafConfigValues.BooleanValue(true);
+
     public static void init() {
         if (!file.exists()) {
             save();

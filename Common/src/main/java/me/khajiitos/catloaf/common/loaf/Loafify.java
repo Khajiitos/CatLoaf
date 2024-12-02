@@ -1,5 +1,6 @@
 package me.khajiitos.catloaf.common.loaf;
 
+import me.khajiitos.catloaf.common.config.CatLoafConfig;
 import net.minecraft.client.model.geom.ModelPart;
 
 public class Loafify {
@@ -17,10 +18,10 @@ public class Loafify {
         head.y = 18.0f;
 
         leftHindLeg.y += 0.2f;
-        leftHindLeg.z += 8.f;
+        leftHindLeg.z += 8.25f;
 
         rightHindLeg.y += 0.2f;
-        rightHindLeg.z += 8.f;
+        rightHindLeg.z += 8.25f;
 
         leftFrontLeg.y = 22.2f;
         leftFrontLeg.z = 2.f;
@@ -30,11 +31,19 @@ public class Loafify {
         rightFrontLeg.z = 2.f;
         rightFrontLeg.xRot = -(float)Math.PI / 2.f;
 
-        tail1.z -= 5.f;
-        tail1.xRot = (float)Math.PI / 2.f;
+        if (CatLoafConfig.hideTailWhenLoafing.get()) {
+            // We have to be careful this gets restored
+            // when changing the setting or the cat
+            // stops loafing
+            tail1.visible = false;
+            tail2.visible = false;
+        } else {
+            tail1.z -= 5.f;
+            tail1.xRot = (float)Math.PI / 2.f;
 
-        tail2.y += 1.f;
-        tail2.z -= 4.f;
-        tail2.xRot = (float)Math.PI / 2.f;
+            tail2.y += 1.f;
+            tail2.z -= 4.f;
+            tail2.xRot = (float)Math.PI / 2.f;
+        }
     }
 }
