@@ -38,6 +38,12 @@ public class ClothConfigScreenMaker {
                 .setSaveConsumer(CatLoafConfig.overrideChanceWithBread::set)
                 .build());
 
+        generalCategory.addEntry(entryBuilder.startBooleanToggle(Component.translatable("catloaf.config.hideTailWhenLoafing"), CatLoafConfig.hideTailWhenLoafing.get())
+                .setDefaultValue(CatLoafConfig.hideTailWhenLoafing::getDefault)
+                .setTooltip(Component.translatable("catloaf.config.hideTailWhenLoafing.description"))
+                .setSaveConsumer(CatLoafConfig.hideTailWhenLoafing::set)
+                .build());
+
         return builder.build();
     }
 }
