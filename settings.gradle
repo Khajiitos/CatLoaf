@@ -41,6 +41,6 @@ plugins {
 rootProject.name = 'CatLoaf'
 
 include 'Common'
-include 'Forge'
+//include 'Forge'
 include 'Fabric'
 include 'NeoForged'
