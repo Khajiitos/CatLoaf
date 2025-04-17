@@ -37,14 +37,6 @@ runs {
     gameTestServer {
         systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
     }
-
-    data {
-        // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
-        // workingDirectory project.file('run-data')
-
-        // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-    }
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
@@ -108,7 +100,7 @@ tasks.withType(Javadoc).configureEach {
 
 // Ideally this project would use Gradle from the root project
 tasks.register('wrapper', Wrapper) {
-    gradleVersion = '8.10.2'
+    gradleVersion = '8.12.1'
 }
 
 // Register dummy ideaSyncTask so that Gradle doesn't complain

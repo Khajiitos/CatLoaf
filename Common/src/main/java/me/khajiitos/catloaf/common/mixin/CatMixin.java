@@ -65,7 +65,7 @@ public abstract class CatMixin extends TamableAnimal implements ILoafable {
 
     @Inject(at = @At("TAIL"), method = "readAdditionalSaveData")
     public void readAdditionalSaveData(CompoundTag compoundTag, CallbackInfo ci) {
-        this.setLoafing(compoundTag.getBoolean("IsLoafing"));
+        this.setLoafing(compoundTag.getBooleanOr("IsLoafing", false));
     }
 
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/Cat;setOrderedToSit(Z)V", ordinal = 0, shift = At.Shift.AFTER), method = "mobInteract")
